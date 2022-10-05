@@ -89,6 +89,10 @@ var allowedEnvvarNames = []string{
 
 	// CI
 	"DD_INSIDE_CI",
+
+	// Remote config
+	"DD_REMOTE_CONFIGURATION_ENABLED",
+	"DD_REMOTE_CONFIGURATION_KEY",
 }
 
 func getAllowedEnvvars() []string {

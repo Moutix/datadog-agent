@@ -276,8 +276,8 @@ func InitConfig(config Config) {
 	config.BindEnvAndSetDefault("remote_tagger_timeout_seconds", 30)
 
 	// Remote config
-	config.BindEnvAndSetDefault("remote_configuration.enabled", false)
-	config.BindEnvAndSetDefault("remote_configuration.key", "")
+	config.BindEnvAndSetDefault("remote_configuration.enabled", false, "DD_REMOTE_CONFIGURATION_ENABLED")
+	config.BindEnvAndSetDefault("remote_configuration.key", "", "DD_REMOTE_CONFIGURATION_KEY")
 	config.BindEnv("remote_configuration.api_key")
 	config.BindEnv("remote_configuration.rc_dd_url", "")
 	config.BindEnvAndSetDefault("remote_configuration.config_root", "")
